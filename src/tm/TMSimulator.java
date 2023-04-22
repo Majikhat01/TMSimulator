@@ -43,10 +43,21 @@ public class TMSimulator {
             TMState currState = tm.getState("0");
 
             //read input string
-            for (char character : br.readLine().toCharArray()) {
-                char writeSymbol = currState.getWriteSymbol(character);
-                character = writeSymbol;
+            Tape tape = new Tape();
+            String inputString = br.readLine();
+            for (int i = 0; i < inputString.length(); i++) {
+                tape.addSymbol(inputString.charAt(i));
+            }
 
+            //run TMSimulator
+            //read, move to next state, write, move tape?
+            while (tape.tapeIterator.hasNext()) {
+                char readSymbol = tape.readSymbol();
+                char writeSymbol = currState.getWriteSymbol(readSymbol);
+                char move = currState.getMoveSymbol(readSymbol);
+                currState = currState.getToState(readSymbol);
+                tape.writeSymbol(writeSymbol);
+                tape.move(move);
             }
 
 

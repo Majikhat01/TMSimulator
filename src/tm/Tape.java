@@ -15,17 +15,16 @@ public class Tape implements TapeInterface {
 
     @Override
     public void addSymbol(char symbol) {
-        ListIterator.add(symbol);
+        tapeIterator.add(symbol);
     }
 
     @Override
-    public void moveLeft(char transition) {
-        ListIterator.previous();
-    }
-
-    @Override
-    public void moveRight(char transition) {
-        ListIterator.next();
+    public void move(char transition) {
+        if (transition == 'R') {
+            tapeIterator.next();
+        } else if (transition == 'L') {
+            tapeIterator.previous();
+        }
     }
 
     @Override

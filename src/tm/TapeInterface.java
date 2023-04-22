@@ -11,16 +11,11 @@ public interface TapeInterface {
     public void addSymbol(char symbol);
 
     /**
-     * moves the Tape one space to the left
+     * moves the Tape one space to the left or right depending on
+     * the character read from the tape
      * @param transition
      */
-    public void moveLeft(char transition);
-
-    /**
-     * moves the Tape one space to the right
-     * @param transition
-     */
-    public void moveRight(char transition);
+    void move(char transition);
 
     /**
      * reads the symbol under the tape head

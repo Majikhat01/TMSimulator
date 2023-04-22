@@ -1,7 +1,5 @@
 package tm;
 
-import fa.State;
-
 import java.util.HashSet;
 import java.util.Set;
 
