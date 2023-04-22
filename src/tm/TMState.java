@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class TMState extends State {
 
-    private Map<Character, Transition> transitions = new HashMap<>();
+    private Map<Character, Transition> transitions;
 
     boolean isStart;
 
@@ -21,16 +21,25 @@ public class TMState extends State {
         isStart = trueFalse;
     }
 
-    public boolean isStartState() {
-        return isStart;
+    public boolean isStartState() { return isStart; }
+
+    public Transition getTransition(char readSymbol) {
+        transitions.get(readSymbol);
     }
 
-    private static class Transition {
+    public void addTransition(TMState nextState, char readSymbol, char writeSymbol, char moveSymbol) {
+        char key = readSymbol;
+        Transition value = new Transition(nextState, writeSymbol, moveSymbol);
+
+        transitions.put(key, value);
+    }
+
+    public static class Transition {
         private TMState toState;
         private char writeSymbol;
         private char moveSymbol;
 
-        public void addTransition(TMState nextState, char writeSymbol, char moveSymbol) {
+        public Transition(TMState nextState, char writeSymbol, char moveSymbol) {
             this.toState = nextState;
             this.writeSymbol = writeSymbol;
             this.moveSymbol = moveSymbol;

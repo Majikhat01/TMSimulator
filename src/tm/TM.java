@@ -70,7 +70,7 @@ public class TM implements TMInterface{
     @Override
     public boolean accepts(String s) {
 
-        //input is the string of the tape, accepts takes the string and passes it to Tape.java
+        //input is the string of the tape, accepts takes the string and passes it to TapeInterface.java
         return false;
     }
 
@@ -81,7 +81,7 @@ public class TM implements TMInterface{
     }
 
     @Override
-    public State getState(String name) {
+    public TMState getState(String name) {
         for (TMState state : states) {
             if (state.getName().equals(name)) {
                 return state;
@@ -89,6 +89,13 @@ public class TM implements TMInterface{
         }
 
         return null;
+    }
+
+    @Override
+    public boolean addTransition(String fromState, String toState, char readSym, char writeSym, char move) {
+
+        getState(fromState).addTransition(getState(toState),readSym, writeSym, move);
+        //returns false if fromstate, tostate doesn't exist, check all syms and move.
     }
 
     @Override
