@@ -24,7 +24,7 @@ public class TMState extends State {
     public boolean isStartState() { return isStart; }
 
     public Transition getTransition(char readSymbol) {
-        transitions.get(readSymbol);
+        return transitions.get(readSymbol);
     }
 
     public void addTransition(TMState nextState, char readSymbol, char writeSymbol, char moveSymbol) {

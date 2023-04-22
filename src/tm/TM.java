@@ -93,9 +93,17 @@ public class TM implements TMInterface{
 
     @Override
     public boolean addTransition(String fromState, String toState, char readSym, char writeSym, char move) {
-
-        getState(fromState).addTransition(getState(toState),readSym, writeSym, move);
-        //returns false if fromstate, tostate doesn't exist, check all syms and move.
+        if (getState(fromState) == null) {
+            return false;
+        } else if (getState(toState) == null) {
+            return false;
+        } else if (!sigma.contains(readSym) || !sigma.contains(writeSym)) {
+            return false;
+        } else if (move == 'R' || move == 'L') {
+            getState(fromState).addTransition(getState(toState), readSym, writeSym, move);
+            return true;
+        }
+        return false;
     }
 
     @Override
