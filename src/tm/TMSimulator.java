@@ -40,8 +40,14 @@ public class TMSimulator {
                 }
             }
 
-            //read input string
+            TMState currState = tm.getState("0");
 
+            //read input string
+            for (char character : br.readLine().toCharArray()) {
+                char writeSymbol = currState.getWriteSymbol(character);
+                character = writeSymbol;
+
+            }
 
 
         } catch (IOException e) {

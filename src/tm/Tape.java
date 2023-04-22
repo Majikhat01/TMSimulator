@@ -13,22 +13,27 @@ public class Tape implements TapeInterface {
         return listIterator(startingIndex);
     }
 
+    @Override
     public void addSymbol(char symbol) {
         ListIterator.add(symbol);
     }
 
+    @Override
     public void moveLeft(char transition) {
         ListIterator.previous();
     }
 
+    @Override
     public void moveRight(char transition) {
         ListIterator.next();
     }
 
+    @Override
     public char readSymbol() {
         return 0;
     }
 
+    @Override
     public void writeSymbol(char symbol) {
 
     }
