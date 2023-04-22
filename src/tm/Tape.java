@@ -4,13 +4,12 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 public class Tape implements TapeInterface {
-//    private int Capacity;
-//    private int startingIndex;
     ListIterator<Character> tapeIterator;
     LinkedList<Character> Tape;
 
-    public ListIterator<Character> listIterator(int startingIndex) {
-        return listIterator(startingIndex);
+    public Tape() {
+        Tape = new LinkedList();
+        tapeIterator = Tape.listIterator();
     }
 
     @Override
@@ -29,17 +28,29 @@ public class Tape implements TapeInterface {
 
     @Override
     public char readSymbol() {
-        return 0;
+        return tapeIterator.next();
     }
 
     @Override
     public void writeSymbol(char symbol) {
-
+        tapeIterator.set(symbol);
     }
 
-    //Need to add a way to add new nodes to te list when the max size is reached
+    //Need to add a way to add to the list when the max size is reached(not sure what josh really meant here)
+    //Should only add a blank(0) to the list if there is a transition being read but no symbol.
+    public void addBlank(char transition) {
+        if (transition == 'R'); {
+            if(!tapeIterator.hasNext()) {
+                Tape.add('0');
+            }
+        }
+        if (transition == 'L'); {
+            if(!tapeIterator.hasNext()) {
+                Tape.add('0');
+            }
+        }
+    }
 
-    //public void reset();
 
-    //public String toString();
+    //public String toString(); //Probably not needed other than for debugging
 }
