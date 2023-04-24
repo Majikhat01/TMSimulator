@@ -7,8 +7,11 @@ public class Tape implements TapeInterface {
     private ListIterator<Character> tapeIterator;
     private LinkedList<Character> tape;
 
-    public Tape() {
+    public Tape(String s) {
         tape = new LinkedList();
+        for (int i = 0; i < s.length(); i++) {
+            tape.add(s.charAt(i));
+        }
         tapeIterator = tape.listIterator();
     }
 
@@ -20,15 +23,25 @@ public class Tape implements TapeInterface {
     @Override
     public void move(char transition) {
         if (transition == 'R') {
-            tapeIterator.next();
+            if (tapeIterator.hasNext()) {
+                tapeIterator.next();
+            } else {
+                tapeIterator.add('0');
+                tapeIterator.next();
+            }
         } else if (transition == 'L') {
-            tapeIterator.previous();
+            if (tapeIterator.hasPrevious()) {
+                tapeIterator.previous();
+            } else {
+                tapeIterator.add('0');
+            }
         }
     }
 
     @Override
     public char readSymbol() {
-        return tapeIterator.next();
+        tapeIterator.next();
+        return tapeIterator.previous();
     }
 
     @Override
@@ -45,8 +58,8 @@ public class Tape implements TapeInterface {
             }
         }
         if (transition == 'L'); {
-            if(!tapeIterator.hasNext()) {
-                tape.add('0');
+            if(!tapeIterator.hasPrevious()) {
+                tape.addFirst('0');
             }
         }
     }

@@ -15,7 +15,6 @@ public class TM implements TMInterface{
         states = new HashSet<>();
         finalStates = new HashSet<>();
         sigma = new HashSet<>();
-        tmTape = new Tape();
     }
 
     //public methods
@@ -75,22 +74,20 @@ public class TM implements TMInterface{
     public boolean accepts(String s) {
 
         boolean doesAccept = false;
+        tmTape = new Tape(s);
 
         TMState currState = this.getState("0");
 
-        for (int i = 0; i < s.length(); i++) {
-            tmTape.addSymbol(s.charAt(i));
-        }
 
         //input is the string of the tape, accepts takes the string and passes it to TapeInterface.java
         while (!finalStates.contains(currState)) {
             char readSymbol = tmTape.readSymbol();
-            char writeSymbol = currState.getWriteSymbol(readSymbol);
-            char move = currState.getMoveSymbol(readSymbol);
 
             if (currState.getToState(readSymbol) == null) {
                 return false;
             } else {
+                char writeSymbol = currState.getWriteSymbol(readSymbol);
+                char move = currState.getMoveSymbol(readSymbol);
                 currState = currState.getToState(readSymbol);
                 tmTape.writeSymbol(writeSymbol);
                 tmTape.move(move);
@@ -127,7 +124,9 @@ public class TM implements TMInterface{
             return false;
         } else if (getState(toState) == null) {
             return false;
-        } else if (!sigma.contains(readSym) || !sigma.contains(writeSym)) {
+        } else if (!sigma.contains(readSym)){
+            return false;
+        } else if (!sigma.contains(writeSym)) {
             return false;
         } else if (move == 'R' || move == 'L') {
             getState(fromState).addTransition(getState(toState), readSym, writeSym, move);
@@ -139,7 +138,8 @@ public class TM implements TMInterface{
     @Override
     public String readTape() {
         String returnString = null;
-        return null;
+        returnString = tmTape.toString();
+        return returnString;
     }
 
     @Override

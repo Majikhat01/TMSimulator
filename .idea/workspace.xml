@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4b8b2fb-dc19-4af2-837c-ae91c4ce59b5" name="Changes" comment="implemented the &quot;run&quot; part of TMSimulator.java, also updated move() in Tape.java and TapeInterface.java">
+    <list default="true" id="f4b8b2fb-dc19-4af2-837c-ae91c4ce59b5" name="Changes" comment="commit to update for tutor sesh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/TM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tm/TMInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TMInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/TMSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TMSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tm/TMState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TMState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/Tape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/Tape.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682103633626</updated>
-      <workItem from="1682103634811" duration="27602000" />
+      <workItem from="1682103634811" duration="34557000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1682112465891</created>
@@ -123,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682132831578</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit to update for tutor sesh">
+      <created>1682367716978</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682367716978</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,15 +140,21 @@
     <MESSAGE value="fixed current errors with addTransition in TM and TMState" />
     <MESSAGE value="put all methods from Tape.java into TapeInterface.java and created method descriptions, params, and returns" />
     <MESSAGE value="implemented the &quot;run&quot; part of TMSimulator.java, also updated move() in Tape.java and TapeInterface.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented the &quot;run&quot; part of TMSimulator.java, also updated move() in Tape.java and TapeInterface.java" />
+    <MESSAGE value="commit to update for tutor sesh" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit to update for tutor sesh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tm/TMSimulator.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/tm/Tape.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tm/TM.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

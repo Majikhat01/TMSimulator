@@ -22,9 +22,12 @@ public class TMSimulator {
                 tm.addState(Integer.toString(i));
             }
 
+            tm.setStart("0");
+            tm.setFinal(Integer.toString(numStates-1));
+
             //2nd line create sigma
             for (int i = 0; i < numSigma; i++) {
-                tm.addSigma((char) i);
+                tm.addSigma((char) ('0' + i));
             }
 
             //transition will be parsed based on (sigma+1)*(states-1) / (states-1)
@@ -42,12 +45,13 @@ public class TMSimulator {
             }
 
             //read input string
-            tm.accepts(br.readLine());
+
+            if (tm.accepts(br.readLine())) {
+                System.out.println(tm.readTape());
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 }
