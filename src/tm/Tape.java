@@ -4,12 +4,12 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 public class Tape implements TapeInterface {
-    ListIterator<Character> tapeIterator;
-    LinkedList<Character> Tape;
+    private ListIterator<Character> tapeIterator;
+    private LinkedList<Character> tape;
 
     public Tape() {
-        Tape = new LinkedList();
-        tapeIterator = Tape.listIterator();
+        tape = new LinkedList();
+        tapeIterator = tape.listIterator();
     }
 
     @Override
@@ -41,12 +41,12 @@ public class Tape implements TapeInterface {
     public void addBlank(char transition) {
         if (transition == 'R'); {
             if(!tapeIterator.hasNext()) {
-                Tape.add('0');
+                tape.add('0');
             }
         }
         if (transition == 'L'); {
             if(!tapeIterator.hasNext()) {
-                Tape.add('0');
+                tape.add('0');
             }
         }
     }

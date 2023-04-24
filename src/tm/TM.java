@@ -5,12 +5,18 @@ import java.util.Set;
 
 public class TM implements TMInterface{
 
-    private Set<TMState> states = new HashSet<>();
-    private Set<TMState> finalStates = new HashSet<>();
-    private Set<Character> sigma = new HashSet<>();
+    private Set<TMState> states;
+    private Set<TMState> finalStates;
+    private Set<Character> sigma;
+    private Tape tmTape;
 
     //Constructor
-    public TM() {}
+    public TM() {
+        states = new HashSet<>();
+        finalStates = new HashSet<>();
+        sigma = new HashSet<>();
+        tmTape = new Tape();
+    }
 
     //public methods
     @Override
@@ -68,8 +74,34 @@ public class TM implements TMInterface{
     @Override
     public boolean accepts(String s) {
 
+        boolean doesAccept = false;
+
+        TMState currState = this.getState("0");
+
+        for (int i = 0; i < s.length(); i++) {
+            tmTape.addSymbol(s.charAt(i));
+        }
+
         //input is the string of the tape, accepts takes the string and passes it to TapeInterface.java
-        return false;
+        while (!finalStates.contains(currState)) {
+            char readSymbol = tmTape.readSymbol();
+            char writeSymbol = currState.getWriteSymbol(readSymbol);
+            char move = currState.getMoveSymbol(readSymbol);
+
+            if (currState.getToState(readSymbol) == null) {
+                return false;
+            } else {
+                currState = currState.getToState(readSymbol);
+                tmTape.writeSymbol(writeSymbol);
+                tmTape.move(move);
+            }
+        }
+
+        if (isFinal(currState.getName())) {
+            doesAccept = true;
+        }
+
+        return doesAccept;
     }
 
     @Override
@@ -105,6 +137,12 @@ public class TM implements TMInterface{
     }
 
     @Override
+    public String readTape() {
+        String returnString = null;
+        return null;
+    }
+
+    @Override
     public boolean isFinal(String name) {
         boolean isAFinal = false;
 
@@ -131,4 +169,7 @@ public class TM implements TMInterface{
 
         return isTheStart;
     }
+
+
+
 }

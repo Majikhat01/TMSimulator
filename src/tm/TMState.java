@@ -33,9 +33,11 @@ public class TMState extends State {
     }
 
     public TMState getToState(char readSymbol) {
-        TMState returnState = getTransition(readSymbol).toState;
-
-        return returnState;
+        if (transitions.containsKey(readSymbol)) {
+            TMState returnState = getTransition(readSymbol).toState;
+            return returnState;
+        }
+        return null;
     }
 
     public char getMoveSymbol(char readSymbol) {
