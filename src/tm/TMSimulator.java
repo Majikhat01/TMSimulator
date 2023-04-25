@@ -54,7 +54,7 @@ public class TMSimulator {
             }
 
             if (tm.accepts(inputString)) {
-                System.out.println(tm.readTape());
+                tm.readTape();
             }
 
         } catch (IOException e) {

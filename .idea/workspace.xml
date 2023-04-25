@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4b8b2fb-dc19-4af2-837c-ae91c4ce59b5" name="Changes" comment="everything should be ready for tape printing">
+    <list default="true" id="f4b8b2fb-dc19-4af2-837c-ae91c4ce59b5" name="Changes" comment="fixed bugs for file0.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/TM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tm/TMInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TMInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/TMSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TMSimulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/Tape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/Tape.java" afterDir="false" />
     </list>
@@ -60,7 +60,7 @@
     <configuration name="TMSimulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tm.TMSimulator" />
       <module name="TMProject3" />
-      <option name="PROGRAM_PARAMETERS" value="file1.txt" />
+      <option name="PROGRAM_PARAMETERS" value="file0.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tm.*" />
@@ -85,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682103633626</updated>
-      <workItem from="1682103634811" duration="40877000" />
+      <workItem from="1682103634811" duration="46019000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1682112465891</created>
@@ -136,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682373877869</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed bugs for file0.txt">
+      <created>1682388136809</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682388136809</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +157,8 @@
     <MESSAGE value="implemented the &quot;run&quot; part of TMSimulator.java, also updated move() in Tape.java and TapeInterface.java" />
     <MESSAGE value="commit to update for tutor sesh" />
     <MESSAGE value="everything should be ready for tape printing" />
-    <option name="LAST_COMMIT_MESSAGE" value="everything should be ready for tape printing" />
+    <MESSAGE value="fixed bugs for file0.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bugs for file0.txt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -167,5 +175,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="tm.TMState" memberName="name" />
+        <PinnedItemInfo parentTag="tm.Tape" memberName="tape" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

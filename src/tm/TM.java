@@ -85,15 +85,20 @@ public class TM implements TMInterface{
 
         //input is the string of the tape, accepts takes the string and passes it to TapeInterface.java
         while (!finalStates.contains(currState)) {
+            //read what's under the head and store in variable
             char readSymbol = tmTape.readSymbol();
 
             if (currState.getToState(readSymbol) == null) {
                 return false;
             } else {
+                //gather write and move info from transition and store in variables
                 char writeSymbol = currState.getWriteSymbol(readSymbol);
                 char move = currState.getMoveSymbol(readSymbol);
+                //move states
                 currState = currState.getToState(readSymbol);
+                //write symbol to tape
                 tmTape.writeSymbol(writeSymbol);
+                //move tape
                 tmTape.move(move);
                 counter = counter + 1;
             }
@@ -144,12 +149,9 @@ public class TM implements TMInterface{
     }
 
     @Override
-    public String readTape() {
-        String returnString;
-        returnString = null;
+    public void readTape() {
         tmTape.printTape();
         System.out.println();
-        return returnString;
     }
 
     @Override

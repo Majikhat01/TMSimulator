@@ -21,5 +21,5 @@ public interface TMInterface extends FAInterface {
      */
     public  boolean addTransition(String fromState, String toState,char readSym, char writeSym, char move);
 
-    public String readTape();
+    public void readTape();
 }
