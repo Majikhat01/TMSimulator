@@ -41,6 +41,10 @@ public class Tape implements TapeInterface {
             } else {
                 tapeIterator.add('0');
                 tapeIterator.previous();
+                if (!tapeIterator.hasPrevious()) {
+                    tapeIterator.add('0');
+                    tapeIterator.previous();
+                }
             }
         }
     }
