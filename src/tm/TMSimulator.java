@@ -21,6 +21,7 @@ public class TMSimulator {
             for (int i = 0; i < numStates; i++) {
                 tm.addState(Integer.toString(i));
             }
+            System.out.println("States added");
 
             tm.setStart("0");
             tm.setFinal(Integer.toString(numStates-1));
@@ -29,6 +30,7 @@ public class TMSimulator {
             for (int i = 0; i < numSigma; i++) {
                 tm.addSigma((char) ('0' + i));
             }
+            System.out.println("Sigma added");
 
             //transition will be parsed based on (sigma+1)*(states-1) / (states-1)
                 //don't forget to check for too many/too little transitions
@@ -43,10 +45,15 @@ public class TMSimulator {
                     tm.addTransition(Integer.toString(i), toState, readSym, writeSym, move);
                 }
             }
+            System.out.println("Transitions added");
 
             //read input string
+            String inputString = br.readLine();
+            if (inputString == null) {
+                inputString = "0";
+            }
 
-            if (tm.accepts(br.readLine())) {
+            if (tm.accepts(inputString)) {
                 System.out.println(tm.readTape());
             }
 

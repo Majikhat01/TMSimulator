@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4b8b2fb-dc19-4af2-837c-ae91c4ce59b5" name="Changes" comment="commit to update for tutor sesh">
+    <list default="true" id="f4b8b2fb-dc19-4af2-837c-ae91c4ce59b5" name="Changes" comment="everything should be ready for tape printing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/TM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/TMSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TMSimulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/Tape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/Tape.java" afterDir="false" />
@@ -59,7 +60,7 @@
     <configuration name="TMSimulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tm.TMSimulator" />
       <module name="TMProject3" />
-      <option name="PROGRAM_PARAMETERS" value="file0.txt" />
+      <option name="PROGRAM_PARAMETERS" value="file1.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tm.*" />
@@ -84,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682103633626</updated>
-      <workItem from="1682103634811" duration="34557000" />
+      <workItem from="1682103634811" duration="40877000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1682112465891</created>
@@ -128,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682367716978</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="everything should be ready for tape printing">
+      <created>1682373877869</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682373877869</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,20 +149,21 @@
     <MESSAGE value="put all methods from Tape.java into TapeInterface.java and created method descriptions, params, and returns" />
     <MESSAGE value="implemented the &quot;run&quot; part of TMSimulator.java, also updated move() in Tape.java and TapeInterface.java" />
     <MESSAGE value="commit to update for tutor sesh" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit to update for tutor sesh" />
+    <MESSAGE value="everything should be ready for tape printing" />
+    <option name="LAST_COMMIT_MESSAGE" value="everything should be ready for tape printing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tm/Tape.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/tm/TMSimulator.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tm/TM.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="11" />
+          <line>86</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

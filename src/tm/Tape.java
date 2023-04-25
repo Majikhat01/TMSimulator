@@ -27,26 +27,37 @@ public class Tape implements TapeInterface {
                 tapeIterator.next();
             } else {
                 tapeIterator.add('0');
-                tapeIterator.next();
             }
         } else if (transition == 'L') {
             if (tapeIterator.hasPrevious()) {
                 tapeIterator.previous();
             } else {
                 tapeIterator.add('0');
+                tapeIterator.previous();
             }
         }
     }
 
     @Override
     public char readSymbol() {
-        tapeIterator.next();
-        return tapeIterator.previous();
+        if (!tapeIterator.hasNext()) {
+            tapeIterator.previous();
+            return tapeIterator.next();
+        } else {
+            tapeIterator.next();
+            return tapeIterator.previous();
+        }
     }
 
     @Override
     public void writeSymbol(char symbol) {
         tapeIterator.set(symbol);
+    }
+
+    public void printTape() {
+        for (int i = 0; i < tape.size(); i++) {
+            System.out.print(tape.get(i));
+        }
     }
 
     //Need to add a way to add to the list when the max size is reached(not sure what josh really meant here)

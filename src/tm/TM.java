@@ -73,8 +73,12 @@ public class TM implements TMInterface{
     @Override
     public boolean accepts(String s) {
 
+        System.out.println("Running");
+
+
         boolean doesAccept = false;
         tmTape = new Tape(s);
+        int counter = 0;
 
         TMState currState = this.getState("0");
 
@@ -91,6 +95,10 @@ public class TM implements TMInterface{
                 currState = currState.getToState(readSymbol);
                 tmTape.writeSymbol(writeSymbol);
                 tmTape.move(move);
+                counter = counter + 1;
+            }
+            if (counter%100000000 == 0) {
+                System.out.print(".");
             }
         }
 
@@ -137,8 +145,10 @@ public class TM implements TMInterface{
 
     @Override
     public String readTape() {
-        String returnString = null;
-        returnString = tmTape.toString();
+        String returnString;
+        returnString = null;
+        tmTape.printTape();
+        System.out.println();
         return returnString;
     }
 
