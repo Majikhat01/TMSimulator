@@ -3,20 +3,27 @@ package tm;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
-public class Tape implements TapeInterface {
+public class Tape implements TapeInterface { //Initializing the tapeIterator, and tape
     private ListIterator<Character> tapeIterator;
     private LinkedList<Character> tape;
 
-    public Tape(String s) {
+    /**
+     * Adds a symbol to the list.
+     * @param s is string passed
+     */
+    public Tape(String s) { //Making a new Tape LinkedList which has a listIterator to traverse the list in both directions
         tape = new LinkedList();
         for (int i = 0; i < s.length(); i++) {
             tape.add(s.charAt(i));
         }
         tapeIterator = tape.listIterator();
     }
-
+    /**
+     * Adds a symbol to the list.
+     * @param symbol is the symbol the TM will add to the Tape list
+     */
     @Override
-    public void addSymbol(char symbol) {
+    public void addSymbol(char symbol) { //
         tapeIterator.add(symbol);
     }
 
@@ -68,22 +75,4 @@ public class Tape implements TapeInterface {
         System.out.println(tape.size());
         System.out.println(sum);
     }
-
-    //Need to add a way to add to the list when the max size is reached(not sure what josh really meant here)
-    //Should only add a blank(0) to the list if there is a transition being read but no symbol.
-    public void addBlank(char transition) {
-        if (transition == 'R'); {
-            if(!tapeIterator.hasNext()) {
-                tape.add('0');
-            }
-        }
-        if (transition == 'L'); {
-            if(!tapeIterator.hasPrevious()) {
-                tape.addFirst('0');
-            }
-        }
-    }
-
-
-    //public String toString(); //Probably not needed other than for debugging
 }
