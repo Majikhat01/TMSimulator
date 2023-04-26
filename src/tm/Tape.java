@@ -1,3 +1,8 @@
+/**
+ * This class creates and maintains the tape of a Turing Machine
+ * @Author Calvin Hatfield
+ * @Author Jaden Smith
+ */
 package tm;
 
 import java.util.LinkedList;
@@ -7,28 +12,19 @@ public class Tape implements TapeInterface { //Initializing the tapeIterator, an
     private ListIterator<Character> tapeIterator;
     private LinkedList<Character> tape;
 
-    /**
-     * Adds a symbol to the list.
-     * @param s is string passed
-     */
-    public Tape(String s) { //Making a new Tape LinkedList which has a listIterator to traverse the list in both directions
+    //Making a new Tape LinkedList which has a listIterator to traverse the list in both directions
+    public Tape(String s) {
         tape = new LinkedList();
         for (int i = 0; i < s.length(); i++) {
             tape.add(s.charAt(i));
         }
         tapeIterator = tape.listIterator();
     }
-    /**
-     * Adds a symbol to the list.
-     * @param symbol is the symbol the TM will add to the Tape list
-     */
-    @Override
-    public void addSymbol(char symbol) { //
-        tapeIterator.add(symbol);
-    }
 
     @Override
     public void move(char transition) {
+
+        //checks for direction and adds '0' if it's at the end of the tape
         if (transition == 'R') {
             if (tapeIterator.hasNext()) {
                 tapeIterator.next();
@@ -65,6 +61,7 @@ public class Tape implements TapeInterface { //Initializing the tapeIterator, an
         tapeIterator.set(symbol);
     }
 
+    @Override
     public void printTape() {
         int sum = 0;
         for (int i = 0; i < tape.size(); i++) {
@@ -72,7 +69,7 @@ public class Tape implements TapeInterface { //Initializing the tapeIterator, an
             sum = sum + Character.getNumericValue(tape.get(i));
         }
         System.out.println();
-        System.out.println(tape.size());
-        System.out.println(sum);
+        //System.out.println(tape.size()); //uncomment if you wish to see the tape size
+        //System.out.println(sum); //uncomment if you wish to see the sum of all elements of the tape
     }
 }

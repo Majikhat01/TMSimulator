@@ -1,9 +1,6 @@
 package tm;
 
 import fa.FAInterface;
-import fa.State;
-
-import java.util.Set;
 
 public interface TMInterface extends FAInterface {
 
@@ -21,5 +18,8 @@ public interface TMInterface extends FAInterface {
      */
     public  boolean addTransition(String fromState, String toState,char readSym, char writeSym, char move);
 
+    /**
+     * Reads the symbol under the head of the TM
+     */
     public void readTape();
 }

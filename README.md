@@ -42,7 +42,8 @@ COMPILING AND RUNNING:**********************************************************
  $ javac tm.TMSimulator.java
  
  To run the files:
- $ java tm.TMSimulator.java <filename>
+ $ java tm.TMSimulator.java < filename >
+ 
 Ex: $ java tm.TMSimulator.java file0.txt
 
 EXPECTED BEHAVIOR:***************************************************************************************

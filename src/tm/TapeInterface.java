@@ -1,14 +1,6 @@
 package tm;
 
-import java.util.ListIterator;
-
 public interface TapeInterface {
-
-    /**
-     * adds a symbol from the input string to the Tape
-     * @param symbol the symbol to add to the tape
-     */
-    public void addSymbol(char symbol);
 
     /**
      * moves the Tape one space to the left or right depending on
@@ -28,4 +20,9 @@ public interface TapeInterface {
      * @param symbol the symbol to be written
      */
     public void writeSymbol(char symbol);
+
+    /**
+     * prints the contents of the tape (visited sections of the tape) to the console
+     */
+    public void printTape();
 }

@@ -1,3 +1,10 @@
+/**
+ * This program is a Turing Machine simulator.
+ * It takes in a file as an argument
+ * The file contains the encoding of a turing machine and an input string
+ * @Author Calvin Hatfield
+ * @Author Jaden Smith
+ */
 package tm;
 
 import java.io.BufferedReader;
@@ -21,21 +28,19 @@ public class TMSimulator {
             for (int i = 0; i < numStates; i++) {
                 tm.addState(Integer.toString(i));
             }
-            System.out.println("States added");
 
-            tm.setStart("0");
+            //set the final state
             tm.setFinal(Integer.toString(numStates-1));
 
-            //2nd line create sigma
+            //2nd line creates sigma
             for (int i = 0; i < numSigma; i++) {
                 tm.addSigma((char) ('0' + i));
             }
-            System.out.println("Sigma added");
 
-            //transition will be parsed based on (sigma+1)*(states-1) / (states-1)
-                //don't forget to check for too many/too little transitions
-            for (int i = 0; i < numStates-1; i++) {
-                for (int j = 0; j < (numSigma); j++) {
+            //decodes and adds the transitions to the states
+            //transitions are parsed based on (sigma+1)*(states-1) / (states-1)
+            for (int i = 0; i < numStates-1; i++) { //tracks the state
+                for (int j = 0; j < (numSigma); j++) { //tracks the sigma
                     String[] line = br.readLine().split(",");
                     String toState = line[0];
                     char readSym = (char) ('0'+j);
@@ -45,7 +50,6 @@ public class TMSimulator {
                     tm.addTransition(Integer.toString(i), toState, readSym, writeSym, move);
                 }
             }
-            System.out.println("Transitions added");
 
             //read input string
             String inputString = br.readLine();
@@ -53,6 +57,7 @@ public class TMSimulator {
                 inputString = "0";
             }
 
+            //check if the input string is accepted by the TM
             if (tm.accepts(inputString)) {
                 tm.readTape();
             }

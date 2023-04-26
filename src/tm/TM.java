@@ -1,3 +1,8 @@
+/**
+ * This class creates and maintains the elements of a Turing Machine
+ * @Author Calvin Hatfield
+ * @Author Jaden Smith
+ */
 package tm;
 
 import java.util.HashSet;
@@ -18,6 +23,7 @@ public class TM implements TMInterface{
     }
 
     //public methods
+    //Adds a state to the TM
     @Override
     public boolean addState(String name) {
         for (TMState state : states) {
@@ -30,6 +36,7 @@ public class TM implements TMInterface{
         return true;
     }
 
+    //Sets a given state as a final accepting state
     @Override
     public boolean setFinal(String name) {
         boolean added = false;
@@ -44,44 +51,19 @@ public class TM implements TMInterface{
         return added;
     }
 
-    @Override
-    public boolean setStart(String name) {
-        boolean startSet = false;
-
-        if (states.contains(getState(name))) {
-
-            for (TMState state : states) {
-                if (state.isStart) {
-                    state.setStartState(false);
-                }
-            }
-
-            for (TMState state : states) {
-                if (state.getName().equals(name)) {
-                    state.setStartState(true);
-                    startSet = true;
-                }
-            }
-        }
-
-        return startSet;
-    }
-
+    //Adds a symbol to TM's sigma
     @Override
     public void addSigma(char symbol) { sigma.add(symbol); }
 
+    //Checks a given string to see if the TM will accept it
     @Override
     public boolean accepts(String s) {
 
-        System.out.println("Running");
-
-
         boolean doesAccept = false;
         tmTape = new Tape(s);
-        int counter = 0;
 
+        //set current state to start state
         TMState currState = this.getState("0");
-
 
         //input is the string of the tape, accepts takes the string and passes it to TapeInterface.java
         while (!finalStates.contains(currState)) {
@@ -100,13 +82,10 @@ public class TM implements TMInterface{
                 tmTape.writeSymbol(writeSymbol);
                 //move tape
                 tmTape.move(move);
-                counter = counter + 1;
-            }
-            if (counter%100000000 == 0) {
-                System.out.print(".");
             }
         }
 
+        //checks for accepting state
         if (isFinal(currState.getName())) {
             doesAccept = true;
         }
@@ -166,19 +145,5 @@ public class TM implements TMInterface{
         }
 
         return isAFinal;
-    }
-
-    @Override
-    public boolean isStart(String name) {
-        boolean isTheStart = false;
-
-        for (TMState state: states) {
-            if (state.isStartState() && state.getName().equals(name)) {
-                isTheStart = true;
-                break;
-            }
-        }
-
-        return isTheStart;
     }
 }

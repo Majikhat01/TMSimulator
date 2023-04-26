@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4b8b2fb-dc19-4af2-837c-ae91c4ce59b5" name="Changes" comment="imma kermit if we don't get it tomorrow lol">
+    <list default="true" id="f4b8b2fb-dc19-4af2-837c-ae91c4ce59b5" name="Changes" comment="FINALLY FINISHED!!!! needs cleaned up and comments/ @author added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fa/FAInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fa/FAInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tm/TM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tm/TMInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TMInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tm/TMSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TMSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tm/TMState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TMState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/Tape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/Tape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tm/TapeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/TapeInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,20 +40,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/calvin/IdeaProjects/Project3/TMProject3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/calvin/IdeaProjects/Project3/TMProject3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -57,7 +64,7 @@
     <configuration name="TMSimulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tm.TMSimulator" />
       <module name="TMProject3" />
-      <option name="PROGRAM_PARAMETERS" value="file5.txt" />
+      <option name="PROGRAM_PARAMETERS" value="file0.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tm.*" />
@@ -82,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682103633626</updated>
-      <workItem from="1682103634811" duration="55000000" />
+      <workItem from="1682103634811" duration="60192000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1682112465891</created>
@@ -154,11 +161,29 @@
       <option name="project" value="LOCAL" />
       <updated>1682398002923</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="FINALLY FINISHED!!!! needs cleaned up and comments/ @author added">
+      <created>1682472871989</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682472871989</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
@@ -171,18 +196,10 @@
     <MESSAGE value="fixed bugs for file0.txt" />
     <MESSAGE value="added character count and sum to printTape() method" />
     <MESSAGE value="imma kermit if we don't get it tomorrow lol" />
-    <option name="LAST_COMMIT_MESSAGE" value="imma kermit if we don't get it tomorrow lol" />
+    <MESSAGE value="FINALLY FINISHED!!!! needs cleaned up and comments/ @author added" />
+    <option name="LAST_COMMIT_MESSAGE" value="FINALLY FINISHED!!!! needs cleaned up and comments/ @author added" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tm/TM.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="tm.TMState" memberName="name" />
