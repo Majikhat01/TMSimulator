@@ -49,9 +49,9 @@ EXPECTED BEHAVIOR:**************************************************************
 
 
  When the TMSimulator.java is passed a file containing the correctly formatted turing machine inputs and the
-simulator is ran, it will begin to simulate the turing machine and tape. It should then output to the console
+simulator is run, it will begin to simulate the turing machine and tape. It should then output to the console
 "States added" when it finishes loading the states, "sigma added" when the sigma is done loading, 
-then "transtions added" once those are done loading. After which the Simulator should output to the console that
+then "transitions added" once those are done loading. After which the Simulator should output to the console that
 the simulation is "running" with a dot(.) showing up every few seconds to indicate that the simulation is still going.
 Once the simulation is complete, it should send the output to the console, followed by the length of the output and the
 sum of the symbols in the simulation.
