@@ -27,24 +27,17 @@ public class Tape implements TapeInterface {
                 tapeIterator.next();
                 if (!tapeIterator.hasNext()) {
                     tapeIterator.add('0');
+                    tapeIterator.previous();
                 }
             } else {
                 tapeIterator.add('0');
             }
         } else if (transition == 'L') {
-            if (tapeIterator.hasPrevious()) {
-                tapeIterator.previous();
-                if (!tapeIterator.hasPrevious()) {
-                    tapeIterator.add('0');
-                    tapeIterator.previous();
-                }
-            } else {
+            if (!tapeIterator.hasPrevious()) {
                 tapeIterator.add('0');
                 tapeIterator.previous();
-                if (!tapeIterator.hasPrevious()) {
-                    tapeIterator.add('0');
-                    tapeIterator.previous();
-                }
+            } else {
+                tapeIterator.previous();
             }
         }
     }

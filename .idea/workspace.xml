@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4b8b2fb-dc19-4af2-837c-ae91c4ce59b5" name="Changes" comment="added character count and sum to printTape() method">
+    <list default="true" id="f4b8b2fb-dc19-4af2-837c-ae91c4ce59b5" name="Changes" comment="imma kermit if we don't get it tomorrow lol">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tm/Tape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tm/Tape.java" afterDir="false" />
     </list>
@@ -57,7 +57,7 @@
     <configuration name="TMSimulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tm.TMSimulator" />
       <module name="TMProject3" />
-      <option name="PROGRAM_PARAMETERS" value="file2.txt" />
+      <option name="PROGRAM_PARAMETERS" value="file5.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tm.*" />
@@ -82,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682103633626</updated>
-      <workItem from="1682103634811" duration="49646000" />
+      <workItem from="1682103634811" duration="55000000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1682112465891</created>
@@ -147,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682393300505</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="imma kermit if we don't get it tomorrow lol">
+      <created>1682398002923</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682398002923</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,16 +170,12 @@
     <MESSAGE value="everything should be ready for tape printing" />
     <MESSAGE value="fixed bugs for file0.txt" />
     <MESSAGE value="added character count and sum to printTape() method" />
-    <option name="LAST_COMMIT_MESSAGE" value="added character count and sum to printTape() method" />
+    <MESSAGE value="imma kermit if we don't get it tomorrow lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="imma kermit if we don't get it tomorrow lol" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tm/TMSimulator.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tm/TM.java</url>
           <line>86</line>
@@ -183,6 +186,7 @@
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="tm.TMState" memberName="name" />
+        <PinnedItemInfo parentTag="tm.TM" memberName="states" />
         <PinnedItemInfo parentTag="tm.Tape" memberName="tape" />
       </pinned-members>
     </pin-to-top-manager>
